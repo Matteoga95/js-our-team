@@ -6,34 +6,34 @@
 
 const ourTeam = [
     {
-        "Name":"Wayne Barnett",
-        "Role":"Founder & CEO",
-        "Image":"./assets/img/wayne-barnett-founder-ceo.jpg"
+        "Name": "Wayne Barnett",
+        "Role": "Founder & CEO",
+        "Image": "./assets/img/wayne-barnett-founder-ceo.jpg"
     },
     {
-        "Name":"Angela",
-        "Role":"Chief Editor",
-        "Image":"./assets/img/angela-caroll-chief-editor.jpg"
+        "Name": "Angela",
+        "Role": "Chief Editor",
+        "Image": "./assets/img/angela-caroll-chief-editor.jpg"
     },
     {
-        "Name":"Waleter gordon",
-        "Role":" Chief Editor",
-        "Image":"./assets/img/walter-gordon-office-manager.jpg"
+        "Name": "Waleter gordon",
+        "Role": " Chief Editor",
+        "Image": "./assets/img/walter-gordon-office-manager.jpg"
     },
     {
-        "Name":"Scott Estrada",
-        "Role":"Developer",
-        "Image":"./assets/img/scott-estrada-developer.jpg"
+        "Name": "Scott Estrada",
+        "Role": "Developer",
+        "Image": "./assets/img/scott-estrada-developer.jpg"
     },
     {
-        "Name":"Wayne Barnett",
-        "Role":"Founder & CEO",
-        "Image":"./assets/img/wayne-barnett-founder-ceo.jpg"
+        "Name": "Wayne Barnett",
+        "Role": "Founder & CEO",
+        "Image": "./assets/img/wayne-barnett-founder-ceo.jpg"
     },
     {
-        "Name":"Barbara Ramos",
-        "Role":"Grafic designer",
-        "Image":"./assets/img/barbara-ramos-graphic-designer.jpg"
+        "Name": "Barbara Ramos",
+        "Role": "Grafic designer",
+        "Image": "./assets/img/barbara-ramos-graphic-designer.jpg"
     }
 ]
 
@@ -42,7 +42,7 @@ const ourTeam = [
 
 // //per ogni oggetto dell'array
 // for (let i = 0; i < ourTeam.length; i++) {
-  
+
 //     //faccio un for in e stampo le proprietà
 //     for (let x in ourTeam[i]) {
 //         console.log(ourTeam[i][x]);
@@ -58,17 +58,29 @@ const divEl = document.querySelector("body>div");
 
 //per ogni oggetto dell'array
 for (let i = 0; i < ourTeam.length; i++) {
-  
+
     //faccio un for in e stampo le proprietà
     for (let x in ourTeam[i]) {
+console.log(x);
+        //se la proprietà è l'img faccio un elemento img altrimenti testo
+        if (x == "Image") {
 
-        //mi salvo la stringa e poi la aggiungo al div
-        const stringResult = ourTeam[i][x] + '\n';
+             //creo l'elemento da aggiungere al div
+            const childEl = document.createElement("img");
 
-        //creo l'elemento da aggiungere al div
-        const childEl  = document.createElement("h3");
-        childEl.innerText=stringResult;
-        divEl.appendChild(childEl);
-     
-      }
+            childEl.src=ourTeam[i][x]
+            divEl.appendChild(childEl);
+
+        } else {
+            //mi salvo la stringa e poi la aggiungo al div
+            const stringResult = ourTeam[i][x] + '\n';
+
+            //creo l'elemento da aggiungere al div
+            const childEl = document.createElement("h3");
+            childEl.innerText = stringResult;
+            divEl.appendChild(childEl);
+
+        }
+
+    }
 }
