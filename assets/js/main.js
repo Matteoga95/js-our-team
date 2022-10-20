@@ -40,13 +40,35 @@ const ourTeam = [
 
 // MILESTONE 1: Stampare su console le informazioni di nome, ruolo e la stringa della foto
 
+// //per ogni oggetto dell'array
+// for (let i = 0; i < ourTeam.length; i++) {
+  
+//     //faccio un for in e stampo le proprietà
+//     for (let x in ourTeam[i]) {
+//         console.log(ourTeam[i][x]);
+//       }
+// }
+
+// MILESTONE 2: Stampare le stesse informazioni su DOM sottoforma di stringhe
+
+//prima mi seleziono l'elemento della dom nella quale stampare le info
+
+const divEl = document.querySelector("body>div");
+
+
 //per ogni oggetto dell'array
 for (let i = 0; i < ourTeam.length; i++) {
   
     //faccio un for in e stampo le proprietà
     for (let x in ourTeam[i]) {
-        console.log(ourTeam[i][x]);
+
+        //mi salvo la stringa e poi la aggiungo al div
+        const stringResult = ourTeam[i][x] + '\n';
+
+        //creo l'elemento da aggiungere al div
+        const childEl  = document.createElement("h3");
+        childEl.innerText=stringResult;
+        divEl.appendChild(childEl);
+     
       }
 }
-
-// MILESTONE 2: Stampare le stesse informazioni su DOM sottoforma di stringhe
