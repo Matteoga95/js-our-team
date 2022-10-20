@@ -6,34 +6,34 @@
 
 const ourTeam = [
     {
-        "Name": "Wayne Barnett",
-        "Role": "Founder & CEO",
-        "Image": "./assets/img/wayne-barnett-founder-ceo.jpg"
+        "name": "Wayne Barnett",
+        "role": "Founder & CEO",
+        "image": "./assets/img/wayne-barnett-founder-ceo.jpg"
     },
     {
-        "Name": "Angela",
-        "Role": "Chief Editor",
-        "Image": "./assets/img/angela-caroll-chief-editor.jpg"
+        "name": "Angela",
+        "role": "Chief Editor",
+        "image": "./assets/img/angela-caroll-chief-editor.jpg"
     },
     {
-        "Name": "Waleter gordon",
-        "Role": " Chief Editor",
-        "Image": "./assets/img/walter-gordon-office-manager.jpg"
+        "name": "Waleter gordon",
+        "role": " Chief Editor",
+        "image": "./assets/img/walter-gordon-office-manager.jpg"
     },
     {
-        "Name": "Scott Estrada",
-        "Role": "Developer",
-        "Image": "./assets/img/scott-estrada-developer.jpg"
+        "name": "Scott Estrada",
+        "role": "Developer",
+        "image": "./assets/img/scott-estrada-developer.jpg"
     },
     {
-        "Name": "Wayne Barnett",
-        "Role": "Founder & CEO",
-        "Image": "./assets/img/wayne-barnett-founder-ceo.jpg"
+        "name": "Wayne Barnett",
+        "role": "Founder & CEO",
+        "image": "./assets/img/wayne-barnett-founder-ceo.jpg"
     },
     {
-        "Name": "Barbara Ramos",
-        "Role": "Grafic designer",
-        "Image": "./assets/img/barbara-ramos-graphic-designer.jpg"
+        "name": "Barbara Ramos",
+        "role": "Grafic designer",
+        "image": "./assets/img/barbara-ramos-graphic-designer.jpg"
     }
 ]
 
@@ -70,7 +70,7 @@ for (let i = 0; i < ourTeam.length; i++) {
     for (let x in ourTeam[i]) {
 
         //se la proprietà è l'img faccio un elemento img altrimenti testo
-        if (x == "Image") {
+        if (x == "image") {
 
             //creo l'elemento da aggiungere al div
             const underChildEl = document.createElement("img");
