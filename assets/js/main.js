@@ -39,6 +39,14 @@ const ourTeam = [
 
 
 // MILESTONE 1: Stampare su console le informazioni di nome, ruolo e la stringa della foto
-console.log(ourTeam);
+
+//per ogni oggetto dell'array
+for (let i = 0; i < ourTeam.length; i++) {
+  
+    //faccio un for in e stampo le proprietà
+    for (let x in ourTeam[i]) {
+        console.log(ourTeam[i][x]);
+      }
+}
 
 // MILESTONE 2: Stampare le stesse informazioni su DOM sottoforma di stringhe
