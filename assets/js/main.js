@@ -53,34 +53,46 @@ const ourTeam = [
 
 //prima mi seleziono l'elemento della dom nella quale stampare le info
 
-const divEl = document.querySelector("body>div");
+const divEl = document.querySelector(".container");
 
 
 //per ogni oggetto dell'array
 for (let i = 0; i < ourTeam.length; i++) {
 
+    //creo un div da inserire nel container
+    const childEl = document.createElement("div");
+    //gli do la larghezza di 1/3
+    childEl.style.width = "calc(100% / 3)";
+    childEl.style.marginTop="4rem"
+
+
     //faccio un for in e stampo le proprietà
     for (let x in ourTeam[i]) {
-console.log(x);
+
         //se la proprietà è l'img faccio un elemento img altrimenti testo
         if (x == "Image") {
 
-             //creo l'elemento da aggiungere al div
-            const childEl = document.createElement("img");
+            //creo l'elemento da aggiungere al div
+            const underChildEl = document.createElement("img");
 
-            childEl.src=ourTeam[i][x]
-            divEl.appendChild(childEl);
+            underChildEl.src = ourTeam[i][x]
+
+
+            childEl.appendChild(underChildEl);
 
         } else {
             //mi salvo la stringa e poi la aggiungo al div
             const stringResult = ourTeam[i][x] + '\n';
 
             //creo l'elemento da aggiungere al div
-            const childEl = document.createElement("h3");
-            childEl.innerText = stringResult;
-            divEl.appendChild(childEl);
-
+            const underChildEl = document.createElement("h3");
+            underChildEl.innerText = stringResult;
+            childEl.appendChild(underChildEl);
+            console.log(childEl);
         }
 
     }
+
+    divEl.appendChild(childEl)
+
 }
